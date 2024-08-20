@@ -1,0 +1,23 @@
+.HeaderLink {
+    color: black; /* Couleur noire pour les liens */
+    text-decoration: none;
+  }
+  
+  .Nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Nav li {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .Nav a {
+    font-size: x-large;
+    color: black; /* Couleur noire pour les liens */
+    text-decoration: none;
+    font-weight: bold;
+  }
