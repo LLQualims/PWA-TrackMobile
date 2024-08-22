@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BarcodeReader from '../../components/BarcodeReader';
+import BarcodeReader from '../../components/BarcodeReader/BarcodeReader.jsx';
 import Header from '../../components/Header/Header';
 import { TextField } from '@mui/material';
+import TemporaryDrawer from '../../components/Drawer/Drawer.jsx';
 
 const isBarcodeDetectionSupported = async () => {
   if ('BarcodeDetector' in window) {
@@ -33,7 +34,6 @@ const ScanPage = () => {
   return (
     <div>
       <img src={require("../../assets/Images/STD_Titre-35-1.png")} className="titre" alt="titre" />
-      <Header/>
           {supported ? (<BarcodeReader />) : (
             <div>
               <p className="no-support" style={{ display: supported ? 'none' : 'block' }}>
@@ -45,6 +45,7 @@ const ScanPage = () => {
                 </p>
               )}
             <TextField label="Rechercher" variant="outlined" value={""} onChange={""} className='search-bar' margin="normal"/>
+            <TemporaryDrawer/>
             </div>
             )}
     </div>

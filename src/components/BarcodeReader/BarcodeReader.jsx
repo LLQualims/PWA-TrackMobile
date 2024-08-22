@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './BarcodeReader.css';
 
 const BarcodeReader = ({ onScan }) => {
   const [isScanning, setIsScanning] = useState(false);
@@ -70,17 +71,16 @@ const BarcodeReader = ({ onScan }) => {
 
   return (
     <div>
-      <p>
-        Scannez un code en utilisant le bouton ci-dessous à l'aide de l'appareil photo de votre appareil.
-      </p>
-
-      <div id="demo-buttons">
-        <button id="scan-button" onClick={() => setIsScanning(true)}>
-          Scan code
-        </button>
-      </div>
-
-      <video ref={videoRef} style={{ width: '70%', height: '30%' }}></video>
+      {!isScanning ? (
+        <div className="button-qrcode">
+          <img src={require("../../assets/QRCode_Inoky.com.png")} alt='Inoky.com' onClick={() => setIsScanning(true)}/> 
+          <p>Appuyer sur le QR Code pour lancer la caméra</p>
+        </div>
+      ) : ( 
+        <div className='camera-serveur'>
+          <video ref={videoRef} />
+        </div>
+      )}
     </div>
   );
 };

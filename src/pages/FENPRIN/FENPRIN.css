@@ -1,4 +1,48 @@
-.FENPRIN{
+.FENPRIN {
     background-image: url("../../assets/TM_FondComplet.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
+.titrefen{
+    margin-top: 20px; /* Ajustez cet espace selon vos besoins */
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 15%;
+    width: 100%; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-container :hover {
+    cursor: pointer;
+}
+
+.top-image {
+    width: 150px;
+    position: absolute;
+    transform: translateY(-73%);
+    z-index: 1;
+}
+
+.bottom-image {
+    width: 150px;
+    margin: 0;
+    z-index: 2; 
+}
+
+@media screen and (max-width: 1024px) {
+    .titrefen{
+        width: 80%;
+    }
+}

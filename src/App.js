@@ -10,9 +10,8 @@ import APPAPVIS from './pages/APPAPVIS/APPAPVIS';
 import APPAPFIC from './pages/APPAPFIC/APPAPFIC';
 import STDLogin from './pages/STDLOGIN/STDLOGIN';
 
-// Hooks
-import { useAuth } from './components/hooks/useAuth';
-
+// Components
+import ProtectedRoute from './components/ProtetedRoute';
 // UI
 import { ThemeProvider } from '@mui/material/styles'; 
 import theme from './theme';
@@ -23,12 +22,12 @@ function App() {
     <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Routes>
-        <Route index element={< FenPrincipale/>} />
-        <Route path="/connexionserveur" element={<FenConnexionServeur/>} />
-        <Route path="/login" element={<STDLogin />} />
-        <Route path="/scan" element={<BarcodeReader />} />
-        <Route path="/appareils" element={<APPAPVIS />} />
-        <Route path="/appareils/:numeroAppareil" element={<APPAPFIC />} />
+        <Route index element={<ProtectedRoute><FenPrincipale/></ProtectedRoute>} />
+        <Route path="/connexionserveur" element={<ProtectedRoute><FenConnexionServeur/></ProtectedRoute>} />
+        <Route path="/login" element={<ProtectedRoute><STDLogin /></ProtectedRoute>} />
+        <Route path="/scan" element={<ProtectedRoute><BarcodeReader /></ProtectedRoute>} />
+        <Route path="/appareils" element={<ProtectedRoute><APPAPVIS /></ProtectedRoute>} />
+        <Route path="/appareils/:numeroAppareil" element={<ProtectedRoute><APPAPFIC /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
     </ThemeProvider>  
