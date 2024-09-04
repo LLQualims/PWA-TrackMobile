@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/PWA-TrackMobile/static/css/main.09579af5.css",
+    "main.js": "/PWA-TrackMobile/static/js/main.102a6937.js",
+    "static/js/453.5ad25fe5.chunk.js": "/PWA-TrackMobile/static/js/453.5ad25fe5.chunk.js",
+    "static/media/TM_FondComplet.png": "/PWA-TrackMobile/static/media/TM_FondComplet.a5150422343a982a5e04.png",
+    "static/media/APP_Titre-128-1.png": "/PWA-TrackMobile/static/media/APP_Titre-128-1.fec102a94fb7a67f664f.png",
+    "static/media/TM_Titre.png": "/PWA-TrackMobile/static/media/TM_Titre.085e4dabc9ba3a7b9268.png",
+    "static/media/LAR_Menu-210-1.png": "/PWA-TrackMobile/static/media/LAR_Menu-210-1.8d5e5537cd75cfc06ac5.png",
+    "index.html": "/PWA-TrackMobile/index.html",
+    "main.09579af5.css.map": "/PWA-TrackMobile/static/css/main.09579af5.css.map",
+    "main.102a6937.js.map": "/PWA-TrackMobile/static/js/main.102a6937.js.map",
+    "453.5ad25fe5.chunk.js.map": "/PWA-TrackMobile/static/js/453.5ad25fe5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09579af5.css",
+    "static/js/main.102a6937.js"
+  ]
+}
